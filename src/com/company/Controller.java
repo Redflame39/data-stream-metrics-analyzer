@@ -80,7 +80,9 @@ public class Controller {
 
     @FXML
     void analyze_action() throws IOException {
+        Metrics.code.clear();
         Metrics.code.addAll(textfield.getText().split("\n"));
+        Metrics.reset();
         Metrics.calculateMetrics();
 
         for (Spen s : Metrics.spenList) {

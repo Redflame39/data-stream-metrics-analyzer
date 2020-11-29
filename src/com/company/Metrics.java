@@ -16,6 +16,7 @@ public class Metrics {
     static int totalSpen;
 
     public static void calculateMetrics() {
+        reset();
         deleteComments(code);
         calculateSpen();
         calculateChepin();
@@ -32,6 +33,15 @@ public class Metrics {
     private static void calculateChepin() {
         Chepin.splitVariables(spenList, code);
         Chepin.splitIOVariables(spenList, code);
+    }
+
+    public static void reset() {
+        spenList.clear();
+        pList.clear();
+        mList.clear();
+        cList.clear();
+        tList.clear();
+        totalSpen = 0;
     }
 
     private static void deleteComments(ObservableList<String> sourceList) {

@@ -13,6 +13,15 @@ public class AnalyzeController {
     private ImageView background;
 
     @FXML
+    private ImageView p1;
+
+    @FXML
+    private ImageView p2;
+
+    @FXML
+    private ImageView p3;
+
+    @FXML
     private TableView<Spen> spenTable;
 
     @FXML
@@ -83,6 +92,9 @@ public class AnalyzeController {
     void initialize() {
         setSpenData();
         setChepinData();
+        p1.setImage(new Image (getClass().getResource("/com/company/pic/kot.png").toExternalForm()));
+        p2.setImage(new Image (getClass().getResource("/com/company/pic/bubuleh.jpg").toExternalForm()));
+        p3.setImage(new Image (getClass().getResource("/com/company/pic/chill.png").toExternalForm()));
         Image stena = new Image(getClass().getResource("/com/company/pic/stena.jpg").toExternalForm());
         background.setImage(stena);
     }
@@ -92,6 +104,7 @@ public class AnalyzeController {
             s.setIdWrap(s.identifier);
             s.setCountWrap(s.count);
         }
+        totalSpen.setText("");
         totalSpen.setText(Integer.toString(Metrics.totalSpen));
 
         spenTable.setItems(Metrics.spenList);

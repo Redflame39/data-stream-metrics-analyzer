@@ -160,5 +160,8 @@
             <Label fx:id="ioResult" GridPane.columnIndex="2" GridPane.rowIndex="4" />
          </children>
       </GridPane>
+      <ImageView fx:id="p1" fitHeight="100.0" fitWidth="200.0" layoutX="14.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="p2" fitHeight="144.0" fitWidth="219.0" layoutX="567.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="p3" fitHeight="114.0" fitWidth="200.0" layoutX="280.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
